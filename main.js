@@ -95,11 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* OS theme change listener (only if no saved preference) */
+  /* OS theme change listener — only if user has explicitly saved a preference */
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-    if (!localStorage.getItem(THEME_KEY)) {
-      applyTheme(e.matches ? 'dark' : 'light');
-    }
+    var saved = localStorage.getItem(THEME_KEY);
+    if (saved) applyTheme(saved);
   });
 
   /* Fade-in */

@@ -11,8 +11,8 @@
 
 <script>
 (function(){
-  var t=localStorage.getItem('theme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
-  document.documentElement.dataset.theme=t||(d?'dark':'light');
+  var t=localStorage.getItem('theme')||'dark';
+  document.documentElement.dataset.theme=t;
   var l=localStorage.getItem('lang')||'en';
   document.documentElement.dataset.lang=l;
   document.documentElement.lang=l;
@@ -34,7 +34,7 @@
 <div class="bg-glow" aria-hidden="true"></div>
 
 <!-- Navigation -->
-<nav aria-label="Main navigation">
+<nav class="site-nav" aria-label="Main navigation">
   <div class="nav-in">
     <a href="./" class="nav-brand" aria-label="Legal Hub — Back to overview">
       <div class="nav-logo-bolt" aria-hidden="true">
@@ -87,13 +87,13 @@
     </header>
 
     <!-- English note callout -->
-    <div class="note-callout lang-en fi fi-d2" role="note">
+    <div class="note-callout lang-en" role="note">
       <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"/></svg>
       <p>The English translation is provided for convenience only. The legally binding version is the German original (switch to DE using the language toggle).</p>
     </div>
 
     <!-- 1. Responsible party -->
-    <article class="legal-card fi fi-d2" aria-labelledby="h-responsible">
+    <article class="legal-card" aria-labelledby="h-responsible">
       <p class="card-label" id="h-responsible">
         <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a16,16,0,1,1,16,16A16,16,0,0,1,112,84Z"/></svg>
         <span data-de="Verantwortlich für den Inhalt" data-en="Responsible Party">Responsible Party</span>
@@ -111,7 +111,7 @@
     </article>
 
     <!-- 2. Contact -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-contact">
+    <article class="legal-card" aria-labelledby="h-contact">
       <p class="card-label" id="h-contact">
         <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19ZM208,64,128,136.77,48,64Z"/></svg>
         <span data-de="Kontakt" data-en="Contact">Contact</span>
@@ -126,7 +126,7 @@
     </article>
 
     <!-- 3. MStV -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-mstv">
+    <article class="legal-card" aria-labelledby="h-mstv">
       <p class="card-label" id="h-mstv">
         <span data-de="Verantwortlicher gemäß § 18 Abs. 2 MStV" data-en="Person Responsible for Content (§ 18 MStV)">Person Responsible for Content (§ 18 MStV)</span>
       </p>
@@ -137,7 +137,7 @@
     </article>
 
     <!-- 4. Disclaimer -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-disclaimer">
+    <article class="legal-card" aria-labelledby="h-disclaimer">
       <p class="card-label" id="h-disclaimer">
         <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"/></svg>
         <span data-de="Haftungsausschluss" data-en="Disclaimer">Disclaimer</span>
@@ -175,7 +175,7 @@
     </article>
 
     <!-- 5. Scope -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-scope">
+    <article class="legal-card" aria-labelledby="h-scope">
       <p class="card-label" id="h-scope">
         <span data-de="Geltungsbereich" data-en="Scope">Scope</span>
       </p>

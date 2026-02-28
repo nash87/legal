@@ -11,8 +11,8 @@
 
 <script>
 (function(){
-  var t=localStorage.getItem('theme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
-  document.documentElement.dataset.theme=t||(d?'dark':'light');
+  var t=localStorage.getItem('theme')||'dark';
+  document.documentElement.dataset.theme=t;
   var l=localStorage.getItem('lang')||'en';
   document.documentElement.dataset.lang=l;
   document.documentElement.lang=l;
@@ -34,7 +34,7 @@
 <div class="bg-glow" aria-hidden="true"></div>
 
 <!-- Navigation -->
-<nav aria-label="Main navigation">
+<nav class="site-nav" aria-label="Main navigation">
   <div class="nav-in">
     <a href="./" class="nav-brand" aria-label="Legal Hub — Back to overview">
       <div class="nav-logo-bolt" aria-hidden="true">
@@ -87,13 +87,13 @@
     </header>
 
     <!-- English note -->
-    <div class="note-callout lang-en fi fi-d2" role="note">
+    <div class="note-callout lang-en" role="note">
       <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"/></svg>
       <p>The English translation is provided for convenience only. The legally binding version is the German original (switch to DE using the language toggle).</p>
     </div>
 
     <!-- 1. Controller -->
-    <article class="legal-card fi fi-d2" aria-labelledby="h-controller">
+    <article class="legal-card" aria-labelledby="h-controller">
       <p class="card-label" id="h-controller">
         <span data-de="1. Verantwortlicher" data-en="1. Data Controller">1. Data Controller</span>
       </p>
@@ -114,7 +114,7 @@
     </article>
 
     <!-- 2. Scope -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-scope">
+    <article class="legal-card" aria-labelledby="h-scope">
       <p class="card-label" id="h-scope">
         <span data-de="2. Anwendungsbereich" data-en="2. Scope">2. Scope</span>
       </p>
@@ -144,7 +144,7 @@
     </article>
 
     <!-- 3. Hosting -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-hosting">
+    <article class="legal-card" aria-labelledby="h-hosting">
       <p class="card-label" id="h-hosting">
         <span data-de="3. Hosting" data-en="3. Hosting">3. Hosting</span>
       </p>
@@ -181,7 +181,7 @@
     </article>
 
     <!-- 4. Web fonts -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-fonts">
+    <article class="legal-card" aria-labelledby="h-fonts">
       <p class="card-label" id="h-fonts">
         <span data-de="4. Schriftarten — Bunny Fonts" data-en="4. Web Fonts — Bunny Fonts">4. Web Fonts — Bunny Fonts</span>
       </p>
@@ -198,7 +198,7 @@
     </article>
 
     <!-- 5. infracraft specific -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-infracraft">
+    <article class="legal-card" aria-labelledby="h-infracraft">
       <p class="card-label" id="h-infracraft">
         <span data-de="5. infracraft.duckdns.org — Spezifisch" data-en="5. infracraft.duckdns.org — Specific">5. infracraft.duckdns.org — Specific</span>
       </p>
@@ -241,7 +241,7 @@
     </article>
 
     <!-- 6. infracraft-demos specific -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-demos">
+    <article class="legal-card" aria-labelledby="h-demos">
       <p class="card-label" id="h-demos">
         <span data-de="6. nash87.github.io/infracraft-demos — Spezifisch" data-en="6. nash87.github.io/infracraft-demos — Specific">6. nash87.github.io/infracraft-demos — Specific</span>
       </p>
@@ -280,7 +280,7 @@
     </article>
 
     <!-- 7. parkhub specific -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-parkhub">
+    <article class="legal-card" aria-labelledby="h-parkhub">
       <p class="card-label" id="h-parkhub">
         <span data-de="7. parkhub.duckdns.org — Spezifisch" data-en="7. parkhub.duckdns.org — Specific">7. parkhub.duckdns.org — Specific</span>
       </p>
@@ -345,7 +345,7 @@
     </article>
 
     <!-- 8. No further collection -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-nothing-else">
+    <article class="legal-card" aria-labelledby="h-nothing-else">
       <p class="card-label" id="h-nothing-else">
         <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg>
         <span data-de="8. Keine weiteren Datenerhebungen" data-en="8. No Further Data Collection">8. No Further Data Collection</span>
@@ -382,7 +382,7 @@
     </article>
 
     <!-- 9. Rights -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-rights">
+    <article class="legal-card" aria-labelledby="h-rights">
       <p class="card-label" id="h-rights">
         <span data-de="9. Ihre Rechte (Art. 15–22 DSGVO)" data-en="9. Your Rights (Art. 15–22 GDPR)">9. Your Rights (Art. 15–22 GDPR)</span>
       </p>
@@ -415,7 +415,7 @@
     </article>
 
     <!-- 10. Currency -->
-    <article class="legal-card fi fi-d3" aria-labelledby="h-currency">
+    <article class="legal-card" aria-labelledby="h-currency">
       <p class="card-label" id="h-currency">
         <span data-de="10. Aktualität dieser Erklärung" data-en="10. Currency of This Policy">10. Currency of This Policy</span>
       </p>
