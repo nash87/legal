@@ -1,25 +1,17 @@
 /* =============================================
    Legal Hub — Interactive
-   Theme (dark/light) + Language (DE/EN) + A11y
+   InfraCraft design system · Phosphor icons
+   Theme · Language · Scroll fade-in · A11y
    ============================================= */
 
-/* Anti-flash IIFE — also inlined in each HTML <head> for instant apply */
-(function () {
-  var t = localStorage.getItem('legalTheme');
-  var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  document.documentElement.dataset.theme = t || (d ? 'dark' : 'light');
-  var l = localStorage.getItem('legalLang') || 'de';
-  document.documentElement.lang = l;
-})();
+var THEME_KEY = 'theme';
+var LANG_KEY  = 'lang';
 
-/* SVG icons */
-var SUN_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
-var MOON_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+/* ─── Phosphor SVG icons ─── */
+var SUN_SVG  = '<svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>';
+var MOON_SVG = '<svg width="13" height="13" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106.08,106.08,0,0,0,224,215a89,89,0,0,1-35.1-24.66Z"/></svg>';
 
-var THEME_KEY = 'legalTheme';
-var LANG_KEY  = 'legalLang';
-
-/* Announce changes to screen readers via aria-live region */
+/* ─── Announce to screen reader ─── */
 function announce(msg) {
   var el = document.getElementById('a11y-live');
   if (!el) return;
@@ -27,7 +19,7 @@ function announce(msg) {
   requestAnimationFrame(function () { el.textContent = msg; });
 }
 
-/* Apply theme and update toggle button */
+/* ─── Theme ─── */
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem(THEME_KEY, theme);
@@ -35,50 +27,81 @@ function applyTheme(theme) {
   if (!btn) return;
   var isDark = theme === 'dark';
   btn.setAttribute('aria-pressed', String(isDark));
-  btn.title = isDark ? 'Switch to light mode / Helles Design' : 'Switch to dark mode / Dunkles Design';
+  btn.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   btn.innerHTML = isDark
-    ? SUN_ICON  + '<span class="sr-only">Switch to light mode</span>'
-    : MOON_ICON + '<span class="sr-only">Switch to dark mode</span>';
+    ? SUN_SVG  + '<span class="sr-only">Switch to light mode</span>'
+    : MOON_SVG + '<span class="sr-only">Switch to dark mode</span>';
 }
 
-/* Apply language and update lang buttons */
+/* ─── Language ─── */
 function applyLang(lang) {
+  document.documentElement.dataset.lang = lang;
   document.documentElement.lang = lang;
   localStorage.setItem(LANG_KEY, lang);
-  document.querySelectorAll('[data-lang]').forEach(function (btn) {
-    var active = btn.dataset.lang === lang;
-    btn.setAttribute('aria-pressed', String(active));
-  });
+  var btn = document.getElementById('lang-toggle');
+  if (!btn) return;
+  btn.setAttribute('aria-label', lang === 'en' ? 'Switch to German' : 'Switch to English');
+  var span = btn.querySelector('[data-en]');
+  if (span) span.textContent = lang === 'en' ? 'DE' : 'EN';
 }
 
+/* ─── Scroll fade-in ─── */
+function initFadeIn() {
+  var items = document.querySelectorAll('.fi');
+  if (!items.length) return;
+  if (!window.IntersectionObserver) {
+    items.forEach(function(el) { el.classList.add('vis'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('vis');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+  items.forEach(function(el) { io.observe(el); });
+}
+
+/* ─── DOMContentLoaded ─── */
 document.addEventListener('DOMContentLoaded', function () {
-  /* --- Theme toggle --- */
+
+  /* Init theme */
+  var currentTheme = document.documentElement.dataset.theme || 'dark';
+  applyTheme(currentTheme);
+
+  /* Theme toggle */
   var themeBtn = document.getElementById('theme-toggle');
   if (themeBtn) {
-    applyTheme(document.documentElement.dataset.theme || 'light');
     themeBtn.addEventListener('click', function () {
       var next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
       applyTheme(next);
-      announce(next === 'dark' ? 'Dunkles Design aktiviert · Dark mode on' : 'Helles Design aktiviert · Light mode on');
+      announce(next === 'dark' ? 'Dark mode on' : 'Light mode on');
     });
   }
 
-  /* --- Language toggle --- */
-  document.querySelectorAll('[data-lang]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var lang = this.dataset.lang;
-      applyLang(lang);
-      announce(lang === 'de' ? 'Sprache: Deutsch' : 'Language: English');
+  /* Init lang */
+  var currentLang = document.documentElement.dataset.lang || 'en';
+  applyLang(currentLang);
+
+  /* Lang toggle */
+  var langBtn = document.getElementById('lang-toggle');
+  if (langBtn) {
+    langBtn.addEventListener('click', function () {
+      var next = document.documentElement.dataset.lang === 'en' ? 'de' : 'en';
+      applyLang(next);
+      announce(next === 'de' ? 'Sprache: Deutsch' : 'Language: English');
     });
-  });
+  }
 
-  /* Init lang button states */
-  applyLang(document.documentElement.lang || 'de');
-
-  /* --- OS theme-change listener --- */
+  /* OS theme change listener (only if no saved preference) */
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
     if (!localStorage.getItem(THEME_KEY)) {
       applyTheme(e.matches ? 'dark' : 'light');
     }
   });
+
+  /* Fade-in */
+  initFadeIn();
 });

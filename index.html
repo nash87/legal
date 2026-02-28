@@ -1,171 +1,203 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en" data-lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rechtliches — Florian · Legal Information</title>
-<meta name="description" content="Impressum und Datenschutzerklärung für die öffentlichen Webdienste von Florian. Legal notice and privacy policy.">
+<title>Legal Hub — Florian</title>
+<meta name="description" content="Legal notice and privacy policy for public web services by Florian. Impressum und Datenschutzerklärung.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://nash87.github.io/legal/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%232563EB'><path d='M213.94,126.92l-80,96A8,8,0,0,1,120,216V152H40a8,8,0,0,1-6.16-13.08l80-96A8,8,0,0,1,128,48v56h72A8,8,0,0,1,213.94,126.92Z'/></svg>">
 
-<!-- Anti-flash: set theme & lang before first paint -->
 <script>
 (function(){
-  var t=localStorage.getItem('legalTheme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
+  var t=localStorage.getItem('theme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
   document.documentElement.dataset.theme=t||(d?'dark':'light');
-  var l=localStorage.getItem('legalLang')||'de';
+  var l=localStorage.getItem('lang')||'en';
+  document.documentElement.dataset.lang=l;
   document.documentElement.lang=l;
 })();
 </script>
 
 <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800|space-grotesk:400,500,600,700|jetbrains-mono:400,500,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <script src="./main.js" defer></script>
 </head>
 <body>
 
-<!-- Skip navigation -->
 <a class="skip-link" href="#main-content">
-  <span class="lang-de">Zum Inhalt springen</span>
-  <span class="lang-en">Skip to main content</span>
+  <span data-de="Zum Inhalt springen" data-en="Skip to main content">Skip to main content</span>
 </a>
-
-<!-- Screen reader live region -->
 <div id="a11y-live" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
 
+<!-- Background glow -->
+<div class="bg-glow" aria-hidden="true"></div>
+
 <!-- Navigation -->
-<nav aria-label="Hauptnavigation / Main navigation">
-  <div class="nav-inner">
-    <a href="./" class="nav-brand" aria-label="Florian – Rechtliches">
-      <span aria-hidden="true">⚖</span>
-      <span class="nav-sep" aria-hidden="true">/</span>
-      <span class="lang-de">Rechtliches</span>
-      <span class="lang-en">Legal</span>
+<nav aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="./" class="nav-brand" aria-label="Legal Hub — Home">
+      <div class="nav-logo-bolt" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="white" aria-hidden="true">
+          <path d="M213.94,126.92l-80,96A8,8,0,0,1,120,216V152H40a8,8,0,0,1-6.16-13.08l80-96A8,8,0,0,1,128,48v56h72A8,8,0,0,1,213.94,126.92Z"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Legal</span>
     </a>
-    <div class="nav-controls" role="group" aria-label="Display settings / Anzeigeeinstellungen">
-      <button id="theme-toggle" class="ctrl-btn" type="button"
-              aria-pressed="false"
+
+    <div class="nav-controls" role="group" aria-label="Display settings">
+      <button id="lang-toggle" class="nav-btn" type="button"
+              aria-label="Switch to German"
+              title="Toggle language">
+        <svg width="13" height="13" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" aria-hidden="true"><circle cx="128" cy="128" r="96"/><line x1="128" y1="32" x2="128" y2="224"/><line x1="32" y1="128" x2="224" y2="128"/><path d="M128,32C160,64,176,96,176,128S160,192,128,224"/><path d="M128,32C96,64,80,96,80,128S96,192,128,224"/></svg>
+        <span data-de="EN" data-en="DE">DE</span>
+      </button>
+
+      <button id="theme-toggle" class="nav-btn" type="button"
+              aria-pressed="true"
               title="Toggle dark/light mode">
-        <!-- icon injected by JS -->
         <span class="sr-only">Toggle theme</span>
       </button>
-      <span class="ctrl-sep" aria-hidden="true">·</span>
-      <div role="group" aria-label="Language / Sprache">
-        <button class="ctrl-btn" data-lang="de" type="button"
-                aria-pressed="true" lang="de"
-                title="Deutsch">DE</button>
-        <span class="ctrl-sep" aria-hidden="true"></span>
-        <button class="ctrl-btn" data-lang="en" type="button"
-                aria-pressed="false" lang="en"
-                title="English">EN</button>
-      </div>
     </div>
   </div>
 </nav>
 
 <!-- Main content -->
 <main id="main-content">
+  <div class="ws page-wrap">
 
-  <!-- Hero -->
-  <header class="hero">
-    <p class="eyebrow lang-de">Rechtliches · Offenlegung</p>
-    <p class="eyebrow lang-en">Legal · Disclosure</p>
-    <h1>Florian</h1>
-    <p class="hero-sub lang-de">Betreiber mehrerer öffentlicher Webdienste — Göttingen, Deutschland</p>
-    <p class="hero-sub lang-en">Operator of public web services — Göttingen, Germany</p>
-  </header>
+    <!-- Hero -->
+    <header class="hero fi">
+      <p class="eyebrow">
+        <span data-de="Rechtliche Angaben · Offenlegung" data-en="Legal Disclosure · Rechtliche Angaben">Legal Disclosure · Rechtliche Angaben</span>
+      </p>
+      <h1 class="hero-h1 grad-text">Legal Hub</h1>
+      <p class="hero-sub">
+        <span data-de="Veröffentlicht von Florian — Göttingen, Deutschland. Gilt für alle öffentlichen Webdienste." data-en="Published by Florian — Göttingen, Germany. Applies to all public web services.">Published by Florian — Göttingen, Germany. Applies to all public web services.</span>
+      </p>
+    </header>
 
-  <!-- Legal document cards -->
-  <nav aria-label="Rechtliche Dokumente / Legal documents">
-    <a class="link-card" href="./impressum.html">
-      <div class="lc-icon" aria-hidden="true">📄</div>
-      <div class="lc-body">
-        <div class="lc-title">
-          <span class="lang-de">Impressum</span>
-          <span class="lang-en">Legal Notice</span>
+    <!-- Document cards -->
+    <nav aria-label="Legal documents" class="card-grid fi fi-d1">
+
+      <!-- Impressum card -->
+      <a class="link-card" href="./impressum.html">
+        <div class="lc-header">
+          <div class="lc-icon-box" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></svg>
+          </div>
+          <div class="lc-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          </div>
         </div>
-        <div class="lc-desc">
-          <span class="lang-de">Anbieterkennzeichnung gemäß § 5 DDG · Haftungsausschluss</span>
-          <span class="lang-en">Disclosures pursuant to § 5 DDG (German Digital Services Act)</span>
+        <div>
+          <p class="lc-meta">§ 5 DDG · Digitale-Dienste-Gesetz</p>
+          <p class="lc-title">
+            <span data-de="Impressum" data-en="Legal Notice">Legal Notice</span>
+          </p>
+          <p class="lc-desc">
+            <span data-de="Anbieterkennzeichnung gemäß § 5 DDG. Verantwortlicher, Kontakt und Haftungsausschluss." data-en="Provider identification pursuant to § 5 DDG. Responsible party, contact details and disclaimer.">Provider identification pursuant to § 5 DDG. Responsible party, contact details and disclaimer.</span>
+          </p>
         </div>
+      </a>
+
+      <!-- Datenschutz card -->
+      <a class="link-card" href="./datenschutz.html">
+        <div class="lc-header">
+          <div class="lc-icon-box" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208,40H48A16,16,0,0,0,32,56V120c0,88,88,120,88,120s88-32,88-120V56A16,16,0,0,0,208,40Zm0,80c0,65.74-62.65,97-80,104.23C110.65,217,48,185.74,48,120V56H208ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.68l50.34-50.34a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg>
+          </div>
+          <div class="lc-arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+          </div>
+        </div>
+        <div>
+          <p class="lc-meta">Art. 13 DSGVO · GDPR</p>
+          <p class="lc-title">
+            <span data-de="Datenschutzerklärung" data-en="Privacy Policy">Privacy Policy</span>
+          </p>
+          <p class="lc-desc">
+            <span data-de="Datenschutzhinweise gemäß Art. 13 DSGVO für alle öffentlichen Webdienste." data-en="Privacy information pursuant to Art. 13 GDPR for all public web services.">Privacy information pursuant to Art. 13 GDPR for all public web services.</span>
+          </p>
+        </div>
+      </a>
+
+    </nav>
+
+    <!-- Scope section -->
+    <section class="sites-section fi fi-d2" aria-labelledby="sites-heading">
+      <p class="s-label">
+        <span data-de="Geltungsbereich" data-en="Scope / Geltungsbereich">Scope / Geltungsbereich</span>
+      </p>
+      <p id="sites-heading" class="s-sub">
+        <span data-de="Diese Informationen gelten für folgende öffentliche Webdienste:" data-en="These disclosures apply to the following public web services:">These disclosures apply to the following public web services:</span>
+      </p>
+
+      <div class="sites-card">
+
+        <div class="site-row">
+          <div class="site-dot" aria-hidden="true"></div>
+          <div class="site-info">
+            <a class="site-url" href="https://infracraft.duckdns.org" target="_blank" rel="noopener noreferrer">
+              infracraft.duckdns.org
+              <svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+            </a>
+            <p class="site-desc">
+              <span data-de="Portfolio &amp; Homelab-Showcase" data-en="Portfolio &amp; Homelab Showcase">Portfolio &amp; Homelab Showcase</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="site-row">
+          <div class="site-dot cyan" aria-hidden="true"></div>
+          <div class="site-info">
+            <a class="site-url" href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener noreferrer">
+              nash87.github.io/infracraft-demos
+              <svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+            </a>
+            <p class="site-desc">
+              <span data-de="InfraCraft Technologie-Demos (GitHub Pages)" data-en="InfraCraft Technology Demos (GitHub Pages)">InfraCraft Technology Demos (GitHub Pages)</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="site-row">
+          <div class="site-dot green" aria-hidden="true"></div>
+          <div class="site-info">
+            <a class="site-url" href="https://parkhub.duckdns.org" target="_blank" rel="noopener noreferrer">
+              parkhub.duckdns.org
+              <svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+            </a>
+            <p class="site-desc">
+              <span data-de="ParkHub — Parkplatz-Management Demo" data-en="ParkHub — Parking Management Demo">ParkHub — Parking Management Demo</span>
+            </p>
+          </div>
+        </div>
+
       </div>
-      <div class="lc-arrow" aria-hidden="true">→</div>
-    </a>
+    </section>
 
-    <a class="link-card" href="./datenschutz.html">
-      <div class="lc-icon" aria-hidden="true">🔒</div>
-      <div class="lc-body">
-        <div class="lc-title">
-          <span class="lang-de">Datenschutzerklärung</span>
-          <span class="lang-en">Privacy Policy</span>
-        </div>
-        <div class="lc-desc">
-          <span class="lang-de">Datenschutzhinweise gemäß Art. 13 DSGVO</span>
-          <span class="lang-en">Privacy information pursuant to Art. 13 GDPR</span>
-        </div>
-      </div>
-      <div class="lc-arrow" aria-hidden="true">→</div>
-    </a>
-  </nav>
-
-  <!-- Applicable sites -->
-  <section class="sites-card" aria-labelledby="sites-heading">
-    <h2 class="sites-card-heading" id="sites-heading">
-      <span class="lang-de">Geltungsbereich — Diese Informationen gelten für</span>
-      <span class="lang-en">Scope — These disclosures apply to</span>
-    </h2>
-    <ul class="site-list" role="list">
-      <li class="site-item">
-        <div class="site-dot" aria-hidden="true"></div>
-        <div class="site-info">
-          <div class="site-url">
-            <a href="https://infracraft.duckdns.org" target="_blank" rel="noopener noreferrer">infracraft.duckdns.org</a>
-          </div>
-          <div class="site-label">
-            <span class="lang-de">Portfolio &amp; Homelab-Showcase</span>
-            <span class="lang-en">Portfolio &amp; Homelab Showcase</span>
-          </div>
-        </div>
-      </li>
-      <li class="site-item">
-        <div class="site-dot" aria-hidden="true"></div>
-        <div class="site-info">
-          <div class="site-url">
-            <a href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener noreferrer">nash87.github.io/infracraft-demos</a>
-          </div>
-          <div class="site-label">
-            <span class="lang-de">InfraCraft Technologie-Demos (GitHub Pages)</span>
-            <span class="lang-en">InfraCraft Technology Demos (GitHub Pages)</span>
-          </div>
-        </div>
-      </li>
-      <li class="site-item">
-        <div class="site-dot" aria-hidden="true"></div>
-        <div class="site-info">
-          <div class="site-url">
-            <a href="https://parkhub.duckdns.org" target="_blank" rel="noopener noreferrer">parkhub.duckdns.org</a>
-          </div>
-          <div class="site-label">
-            <span class="lang-de">ParkHub — Parkplatz-Management Demo</span>
-            <span class="lang-en">ParkHub — Parking Management Demo</span>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </section>
-
+  </div>
 </main>
 
 <!-- Footer -->
 <footer role="contentinfo">
-  <div class="footer-inner">
+  <div class="footer-in">
     <p>© 2026 Florian</p>
-    <nav class="footer-links" aria-label="Verwandte Webdienste / Related services">
-      <a href="https://infracraft.duckdns.org" target="_blank" rel="noopener noreferrer">infracraft</a>
-      <a href="https://parkhub.duckdns.org" target="_blank" rel="noopener noreferrer">parkhub</a>
-      <a href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener noreferrer">demos</a>
+    <nav class="footer-links" aria-label="Related services">
+      <a href="https://infracraft.duckdns.org" target="_blank" rel="noopener noreferrer">
+        infracraft
+        <svg width="10" height="10" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+      <a href="https://parkhub.duckdns.org" target="_blank" rel="noopener noreferrer">
+        parkhub
+        <svg width="10" height="10" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
+      <a href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener noreferrer">
+        demos
+        <svg width="10" height="10" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+      </a>
     </nav>
   </div>
 </footer>

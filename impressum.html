@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en" data-lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,209 +7,227 @@
 <meta name="description" content="Impressum gemäß § 5 DDG. Legal notice pursuant to § 5 of the German Digital Services Act.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://nash87.github.io/legal/impressum.html">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%232563EB'><path d='M213.94,126.92l-80,96A8,8,0,0,1,120,216V152H40a8,8,0,0,1-6.16-13.08l80-96A8,8,0,0,1,128,48v56h72A8,8,0,0,1,213.94,126.92Z'/></svg>">
 
 <script>
 (function(){
-  var t=localStorage.getItem('legalTheme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
+  var t=localStorage.getItem('theme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
   document.documentElement.dataset.theme=t||(d?'dark':'light');
-  var l=localStorage.getItem('legalLang')||'de';
+  var l=localStorage.getItem('lang')||'en';
+  document.documentElement.dataset.lang=l;
   document.documentElement.lang=l;
 })();
 </script>
 
 <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800|space-grotesk:400,500,600,700|jetbrains-mono:400,500,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <script src="./main.js" defer></script>
 </head>
 <body>
 
 <a class="skip-link" href="#main-content">
-  <span class="lang-de">Zum Inhalt springen</span>
-  <span class="lang-en">Skip to main content</span>
+  <span data-de="Zum Inhalt springen" data-en="Skip to main content">Skip to main content</span>
 </a>
 <div id="a11y-live" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
 
-<nav aria-label="Hauptnavigation / Main navigation">
-  <div class="nav-inner">
-    <a href="./" class="nav-brand" aria-label="Florian – Rechtliches – Zur Übersicht">
-      <span aria-hidden="true">⚖</span>
-      <span class="nav-sep" aria-hidden="true">/</span>
-      <span class="lang-de">Rechtliches</span>
-      <span class="lang-en">Legal</span>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<nav aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="./" class="nav-brand" aria-label="Legal Hub — Back to overview">
+      <div class="nav-logo-bolt" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="white" aria-hidden="true">
+          <path d="M213.94,126.92l-80,96A8,8,0,0,1,120,216V152H40a8,8,0,0,1-6.16-13.08l80-96A8,8,0,0,1,128,48v56h72A8,8,0,0,1,213.94,126.92Z"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Legal</span>
     </a>
-    <div class="nav-controls" role="group" aria-label="Display settings / Anzeigeeinstellungen">
-      <button id="theme-toggle" class="ctrl-btn" type="button" aria-pressed="false" title="Toggle theme">
+
+    <div class="nav-controls" role="group" aria-label="Display settings">
+      <button id="lang-toggle" class="nav-btn" type="button"
+              aria-label="Switch to German"
+              title="Toggle language">
+        <svg width="13" height="13" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" aria-hidden="true"><circle cx="128" cy="128" r="96"/><line x1="128" y1="32" x2="128" y2="224"/><line x1="32" y1="128" x2="224" y2="128"/><path d="M128,32C160,64,176,96,176,128S160,192,128,224"/><path d="M128,32C96,64,80,96,80,128S96,192,128,224"/></svg>
+        <span data-de="EN" data-en="DE">DE</span>
+      </button>
+
+      <button id="theme-toggle" class="nav-btn" type="button"
+              aria-pressed="true"
+              title="Toggle dark/light mode">
         <span class="sr-only">Toggle theme</span>
       </button>
-      <span class="ctrl-sep" aria-hidden="true">·</span>
-      <div role="group" aria-label="Language / Sprache">
-        <button class="ctrl-btn" data-lang="de" type="button" aria-pressed="true" lang="de" title="Deutsch">DE</button>
-        <span class="ctrl-sep" aria-hidden="true"></span>
-        <button class="ctrl-btn" data-lang="en" type="button" aria-pressed="false" lang="en" title="English">EN</button>
-      </div>
     </div>
   </div>
 </nav>
 
+<!-- Main -->
 <main id="main-content">
+  <div class="ws page-wrap">
 
-  <a href="./" class="back-link">
-    ← <span class="lang-de">Zur Übersicht</span><span class="lang-en">Back to overview</span>
-  </a>
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="breadcrumb fi">
+      <a href="./">Legal Hub</a>
+      <svg width="10" height="10" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
+      <span class="bc-cur" aria-current="page">
+        <span data-de="Impressum" data-en="Legal Notice">Legal Notice</span>
+      </span>
+    </nav>
 
-  <header class="page-header">
-    <p class="page-eyebrow">
-      <span class="lang-de">Rechtliches · § 5 DDG</span>
-      <span class="lang-en">Legal · § 5 DDG</span>
-    </p>
-    <h1>
-      <span class="lang-de">Impressum</span>
-      <span class="lang-en">Legal Notice</span>
-    </h1>
-    <p class="page-sub">
-      <span class="lang-de">Angaben gemäß § 5 des Digitale-Dienste-Gesetzes (DDG)</span>
-      <span class="lang-en">Pursuant to § 5 of the German Digital Services Act (DDG) · The legally binding version is the German original.</span>
-    </p>
-  </header>
+    <!-- Page header -->
+    <header class="page-header fi fi-d1">
+      <p class="s-label">§ 5 DDG · Digitale-Dienste-Gesetz</p>
+      <h1>
+        <span data-de="Impressum" data-en="Legal Notice">Legal Notice</span>
+      </h1>
+      <p class="s-sub">
+        <span data-de="Angaben gemäß § 5 des Digitale-Dienste-Gesetzes (DDG)." data-en="Pursuant to § 5 of the German Digital Services Act (DDG). The legally binding version is the German original.">Pursuant to § 5 of the German Digital Services Act (DDG). The legally binding version is the German original.</span>
+      </p>
+    </header>
 
-  <!-- 1. Responsible party -->
-  <article class="legal-card" aria-labelledby="h-responsible">
-    <h2 id="h-responsible">
-      <span class="lang-de">Verantwortlich für den Inhalt</span>
-      <span class="lang-en">Responsible Party</span>
-    </h2>
-    <address>
+    <!-- English note callout -->
+    <div class="note-callout lang-en fi fi-d2" role="note">
+      <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"/></svg>
+      <p>The English translation is provided for convenience only. The legally binding version is the German original (switch to DE using the language toggle).</p>
+    </div>
+
+    <!-- 1. Responsible party -->
+    <article class="legal-card fi fi-d2" aria-labelledby="h-responsible">
+      <p class="card-label" id="h-responsible">
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a16,16,0,1,1,16,16A16,16,0,0,1,112,84Z"/></svg>
+        <span data-de="Verantwortlich für den Inhalt" data-en="Responsible Party">Responsible Party</span>
+      </p>
+      <address>
+        <div class="lang-de">
+          <p><strong>Florian</strong></p>
+          <p>37081 Göttingen<br>Deutschland</p>
+        </div>
+        <div class="lang-en">
+          <p><strong>Florian</strong></p>
+          <p>37081 Göttingen<br>Germany</p>
+        </div>
+      </address>
+    </article>
+
+    <!-- 2. Contact -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-contact">
+      <p class="card-label" id="h-contact">
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19ZM208,64,128,136.77,48,64Z"/></svg>
+        <span data-de="Kontakt" data-en="Contact">Contact</span>
+      </p>
+      <p>
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" style="vertical-align:-2px;margin-right:.35rem;color:var(--tx3)"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-8,144H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19ZM208,64,128,136.77,48,64Z"/></svg>
+        <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a>
+      </p>
+      <p style="margin-top:.5rem">
+        <span data-de="Anfragen werden in der Regel innerhalb von 48 Stunden persönlich beantwortet." data-en="Inquiries are generally answered personally within 48 hours.">Inquiries are generally answered personally within 48 hours.</span>
+      </p>
+    </article>
+
+    <!-- 3. MStV -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-mstv">
+      <p class="card-label" id="h-mstv">
+        <span data-de="Verantwortlicher gemäß § 18 Abs. 2 MStV" data-en="Person Responsible for Content (§ 18 MStV)">Person Responsible for Content (§ 18 MStV)</span>
+      </p>
+      <p>
+        Florian
+        <span data-de=" (Kontaktdaten wie oben)" data-en=" (contact details as above)"> (contact details as above)</span>
+      </p>
+    </article>
+
+    <!-- 4. Disclaimer -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-disclaimer">
+      <p class="card-label" id="h-disclaimer">
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"/></svg>
+        <span data-de="Haftungsausschluss" data-en="Disclaimer">Disclaimer</span>
+      </p>
+
+      <h3 data-de="Haftung für Inhalte" data-en="Liability for Content">Liability for Content</h3>
       <div class="lang-de">
-        <p><strong>Florian</strong></p>
-        <p>37081 Göttingen<br>Deutschland</p>
+        <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+        <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.</p>
       </div>
       <div class="lang-en">
-        <p><strong>Florian</strong></p>
-        <p>37081 Göttingen<br>Germany</p>
+        <p>As a service provider, I am responsible for my own content on these pages in accordance with general laws pursuant to § 7 Abs. 1 DDG. However, I am not obligated under §§ 8–10 DDG to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
+        <p>Obligations to remove or block the use of information under general laws remain unaffected. Liability in this regard is only possible from the point in time at which a concrete legal violation becomes known.</p>
       </div>
-    </address>
-  </article>
 
-  <!-- 2. Contact -->
-  <article class="legal-card" aria-labelledby="h-contact">
-    <h2 id="h-contact">
-      <span class="lang-de">Kontakt</span>
-      <span class="lang-en">Contact</span>
-    </h2>
-    <p>E-Mail: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
-    <p class="lang-de" style="font-size:13px;color:var(--tx3);margin-top:4px">
-      Anfragen werden in der Regel innerhalb von 48 Stunden persönlich beantwortet.
-    </p>
-    <p class="lang-en" style="font-size:13px;color:var(--tx3);margin-top:4px">
-      Inquiries are generally answered personally within 48 hours.
-    </p>
-  </article>
+      <hr class="section-divider">
 
-  <!-- 3. MStV -->
-  <article class="legal-card" aria-labelledby="h-mstv">
-    <h2 id="h-mstv">
-      <span class="lang-de">Verantwortlicher gemäß § 18 Abs. 2 MStV</span>
-      <span class="lang-en">Person Responsible for Content (§ 18 MStV)</span>
-    </h2>
-    <p>
-      Florian
-      <span class="lang-de"> (Kontaktdaten wie oben)</span>
-      <span class="lang-en"> (contact details as above)</span>
-    </p>
-  </article>
+      <h3 data-de="Haftung für Links" data-en="Liability for Links">Liability for Links</h3>
+      <div class="lang-de">
+        <p>Diese Seite enthält Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
+      </div>
+      <div class="lang-en">
+        <p>These pages contain links to external third-party websites over whose content I have no control. The respective provider or operator of the linked pages is always responsible for their content. A permanent review of linked pages is not reasonable without specific indication of a legal violation.</p>
+      </div>
 
-  <!-- 4. Disclaimer -->
-  <article class="legal-card" aria-labelledby="h-disclaimer">
-    <h2 id="h-disclaimer">
-      <span class="lang-de">Haftungsausschluss</span>
-      <span class="lang-en">Disclaimer</span>
-    </h2>
+      <hr class="section-divider">
 
-    <h3>
-      <span class="lang-de">Haftung für Inhalte</span>
-      <span class="lang-en">Liability for Content</span>
-    </h3>
-    <div class="lang-de">
-      <p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-      <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.</p>
-    </div>
-    <div class="lang-en">
-      <p>As a service provider, I am responsible for my own content on these pages in accordance with general laws pursuant to § 7 Abs. 1 DDG. However, I am not obligated under §§ 8–10 DDG to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
-      <p>Obligations to remove or block the use of information under general laws remain unaffected. Liability in this regard is only possible from the point in time at which a concrete legal violation becomes known.</p>
-    </div>
+      <h3 data-de="Urheberrecht" data-en="Copyright">Copyright</h3>
+      <div class="lang-de">
+        <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors.</p>
+      </div>
+      <div class="lang-en">
+        <p>Content and works created by the site operator are subject to German copyright law. Reproduction, editing, distribution, or any other use beyond the limits of copyright law requires the written consent of the respective author.</p>
+      </div>
+    </article>
 
-    <h3>
-      <span class="lang-de">Haftung für Links</span>
-      <span class="lang-en">Liability for Links</span>
-    </h3>
-    <div class="lang-de">
-      <p>Diese Seite enthält Links zu externen Websites Dritter, auf deren Inhalte kein Einfluss besteht. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
-    </div>
-    <div class="lang-en">
-      <p>These pages contain links to external third-party websites over whose content I have no control. The respective provider or operator of the linked pages is always responsible for their content. A permanent review of linked pages is not reasonable without specific indication of a legal violation.</p>
-    </div>
+    <!-- 5. Scope -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-scope">
+      <p class="card-label" id="h-scope">
+        <span data-de="Geltungsbereich" data-en="Scope">Scope</span>
+      </p>
+      <div class="lang-de">
+        <p>Dieses Impressum gilt als gesetzlich vorgeschriebene Anbieterkennzeichnung für folgende Webdienste:</p>
+      </div>
+      <div class="lang-en">
+        <p>This legal notice serves as the mandatory identification disclosure for the following web services:</p>
+      </div>
 
-    <h3>
-      <span class="lang-de">Urheberrecht</span>
-      <span class="lang-en">Copyright</span>
-    </h3>
-    <div class="lang-de">
-      <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors.</p>
-    </div>
-    <div class="lang-en">
-      <p>Content and works created by the site operator are subject to German copyright law. Reproduction, editing, distribution, or any other use beyond the limits of copyright law requires the written consent of the respective author.</p>
-    </div>
-  </article>
+      <ul class="legal-list" style="margin-top:.75rem">
+        <li>
+          <a class="ext-link" href="https://infracraft.duckdns.org" target="_blank" rel="noopener noreferrer">
+            infracraft.duckdns.org
+            <svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+          </a>
+          — <span data-de="Portfolio &amp; Homelab-Showcase" data-en="Portfolio &amp; Homelab Showcase">Portfolio &amp; Homelab Showcase</span>
+        </li>
+        <li>
+          <a class="ext-link" href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener noreferrer">
+            nash87.github.io/infracraft-demos
+            <svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+          </a>
+          — <span data-de="InfraCraft Technologie-Demos" data-en="InfraCraft Technology Demos">InfraCraft Technology Demos</span>
+        </li>
+        <li>
+          <a class="ext-link" href="https://parkhub.duckdns.org" target="_blank" rel="noopener noreferrer">
+            parkhub.duckdns.org
+            <svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg>
+          </a>
+          — <span data-de="ParkHub Parkplatz-Management Demo" data-en="ParkHub Parking Management Demo">ParkHub Parking Management Demo</span>
+        </li>
+      </ul>
 
-  <!-- 5. Scope -->
-  <article class="legal-card" aria-labelledby="h-scope">
-    <h2 id="h-scope">
-      <span class="lang-de">Geltungsbereich</span>
-      <span class="lang-en">Scope</span>
-    </h2>
-    <div class="lang-de">
-      <p>Dieses Impressum gilt als gesetzlich vorgeschriebene Anbieterkennzeichnung für folgende Webdienste:</p>
-    </div>
-    <div class="lang-en">
-      <p>This legal notice serves as the mandatory identification disclosure for the following web services:</p>
-    </div>
-    <ul>
-      <li>
-        <a href="https://infracraft.duckdns.org" target="_blank" rel="noopener noreferrer">infracraft.duckdns.org</a>
-        — <span class="lang-de">Portfolio &amp; Homelab-Showcase</span><span class="lang-en">Portfolio &amp; Homelab Showcase</span>
-      </li>
-      <li>
-        <a href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener noreferrer">nash87.github.io/infracraft-demos</a>
-        — <span class="lang-de">InfraCraft Technologie-Demos</span><span class="lang-en">InfraCraft Technology Demos</span>
-      </li>
-      <li>
-        <a href="https://parkhub.duckdns.org" target="_blank" rel="noopener noreferrer">parkhub.duckdns.org</a>
-        — <span class="lang-de">ParkHub Parkplatz-Management Demo</span><span class="lang-en">ParkHub Parking Management Demo</span>
-      </li>
-    </ul>
-    <p class="lang-de" style="margin-top:12px;font-size:13px;color:var(--tx3)">
-      Diese Seite selbst (nash87.github.io/legal) ist kein eigenständiger Webdienst, sondern dient ausschließlich der Anbieterkennzeichnung und Datenschutzinformation.
-    </p>
-    <p class="lang-en" style="margin-top:12px;font-size:13px;color:var(--tx3)">
-      This page itself (nash87.github.io/legal) is not a standalone service, but solely serves as a legal disclosure and privacy information hub.
-    </p>
-  </article>
+      <p style="margin-top:.875rem;font-size:.8125rem;color:var(--tx3)">
+        <span data-de="Diese Seite selbst (nash87.github.io/legal) ist kein eigenständiger Webdienst, sondern dient ausschließlich der Anbieterkennzeichnung und Datenschutzinformation." data-en="This page itself (nash87.github.io/legal) is not a standalone service, but solely serves as a legal disclosure and privacy information hub.">This page itself (nash87.github.io/legal) is not a standalone service, but solely serves as a legal disclosure and privacy information hub.</span>
+      </p>
+    </article>
 
+  </div>
 </main>
 
+<!-- Footer -->
 <footer role="contentinfo">
-  <div class="footer-inner">
+  <div class="footer-in">
     <p>© 2026 Florian</p>
     <nav class="footer-links" aria-label="Legal navigation">
       <a href="./">
-        <span class="lang-de">Übersicht</span>
-        <span class="lang-en">Overview</span>
+        <span data-de="Übersicht" data-en="Overview">Overview</span>
       </a>
       <a href="./datenschutz.html">
-        <span class="lang-de">Datenschutz</span>
-        <span class="lang-en">Privacy</span>
+        <span data-de="Datenschutz" data-en="Privacy Policy">Privacy Policy</span>
       </a>
     </nav>
   </div>

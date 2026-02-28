@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en" data-lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,435 +7,439 @@
 <meta name="description" content="Datenschutzerklärung gemäß Art. 13 DSGVO für alle öffentlichen Webdienste von Florian. Privacy policy pursuant to Art. 13 GDPR.">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://nash87.github.io/legal/datenschutz.html">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%232563EB'><path d='M213.94,126.92l-80,96A8,8,0,0,1,120,216V152H40a8,8,0,0,1-6.16-13.08l80-96A8,8,0,0,1,128,48v56h72A8,8,0,0,1,213.94,126.92Z'/></svg>">
 
 <script>
 (function(){
-  var t=localStorage.getItem('legalTheme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
+  var t=localStorage.getItem('theme'),d=matchMedia('(prefers-color-scheme:dark)').matches;
   document.documentElement.dataset.theme=t||(d?'dark':'light');
-  var l=localStorage.getItem('legalLang')||'de';
+  var l=localStorage.getItem('lang')||'en';
+  document.documentElement.dataset.lang=l;
   document.documentElement.lang=l;
 })();
 </script>
 
 <link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800|space-grotesk:400,500,600,700|jetbrains-mono:400,500,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 <script src="./main.js" defer></script>
 </head>
 <body>
 
 <a class="skip-link" href="#main-content">
-  <span class="lang-de">Zum Inhalt springen</span>
-  <span class="lang-en">Skip to main content</span>
+  <span data-de="Zum Inhalt springen" data-en="Skip to main content">Skip to main content</span>
 </a>
 <div id="a11y-live" role="status" aria-live="polite" aria-atomic="true" class="sr-only"></div>
 
-<nav aria-label="Hauptnavigation / Main navigation">
-  <div class="nav-inner">
-    <a href="./" class="nav-brand" aria-label="Florian – Rechtliches – Zur Übersicht">
-      <span aria-hidden="true">⚖</span>
-      <span class="nav-sep" aria-hidden="true">/</span>
-      <span class="lang-de">Rechtliches</span>
-      <span class="lang-en">Legal</span>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<nav aria-label="Main navigation">
+  <div class="nav-in">
+    <a href="./" class="nav-brand" aria-label="Legal Hub — Back to overview">
+      <div class="nav-logo-bolt" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="white" aria-hidden="true">
+          <path d="M213.94,126.92l-80,96A8,8,0,0,1,120,216V152H40a8,8,0,0,1-6.16-13.08l80-96A8,8,0,0,1,128,48v56h72A8,8,0,0,1,213.94,126.92Z"/>
+        </svg>
+      </div>
+      <span class="nav-logo-text">Legal</span>
     </a>
-    <div class="nav-controls" role="group" aria-label="Display settings / Anzeigeeinstellungen">
-      <button id="theme-toggle" class="ctrl-btn" type="button" aria-pressed="false" title="Toggle theme">
+
+    <div class="nav-controls" role="group" aria-label="Display settings">
+      <button id="lang-toggle" class="nav-btn" type="button"
+              aria-label="Switch to German"
+              title="Toggle language">
+        <svg width="13" height="13" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" aria-hidden="true"><circle cx="128" cy="128" r="96"/><line x1="128" y1="32" x2="128" y2="224"/><line x1="32" y1="128" x2="224" y2="128"/><path d="M128,32C160,64,176,96,176,128S160,192,128,224"/><path d="M128,32C96,64,80,96,80,128S96,192,128,224"/></svg>
+        <span data-de="EN" data-en="DE">DE</span>
+      </button>
+
+      <button id="theme-toggle" class="nav-btn" type="button"
+              aria-pressed="true"
+              title="Toggle dark/light mode">
         <span class="sr-only">Toggle theme</span>
       </button>
-      <span class="ctrl-sep" aria-hidden="true">·</span>
-      <div role="group" aria-label="Language / Sprache">
-        <button class="ctrl-btn" data-lang="de" type="button" aria-pressed="true" lang="de" title="Deutsch">DE</button>
-        <span class="ctrl-sep" aria-hidden="true"></span>
-        <button class="ctrl-btn" data-lang="en" type="button" aria-pressed="false" lang="en" title="English">EN</button>
-      </div>
     </div>
   </div>
 </nav>
 
+<!-- Main -->
 <main id="main-content">
+  <div class="ws page-wrap">
 
-  <a href="./" class="back-link">
-    ← <span class="lang-de">Zur Übersicht</span><span class="lang-en">Back to overview</span>
-  </a>
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="breadcrumb fi">
+      <a href="./">Legal Hub</a>
+      <svg width="10" height="10" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
+      <span class="bc-cur" aria-current="page">
+        <span data-de="Datenschutz" data-en="Privacy Policy">Privacy Policy</span>
+      </span>
+    </nav>
 
-  <header class="page-header">
-    <p class="page-eyebrow">
-      <span class="lang-de">Datenschutz · Art. 13 DSGVO</span>
-      <span class="lang-en">Privacy · Art. 13 GDPR</span>
-    </p>
-    <h1>
-      <span class="lang-de">Datenschutzerklärung</span>
-      <span class="lang-en">Privacy Policy</span>
-    </h1>
-    <p class="page-sub">
-      <span class="lang-de">Gemäß Art. 13 DSGVO · Stand: Februar 2026</span>
-      <span class="lang-en">Pursuant to Art. 13 GDPR · Last updated: February 2026 · The legally binding version is the German original.</span>
-    </p>
-  </header>
+    <!-- Page header -->
+    <header class="page-header fi fi-d1">
+      <p class="s-label">Art. 13 DSGVO · GDPR</p>
+      <h1>
+        <span data-de="Datenschutzerklärung" data-en="Privacy Policy">Privacy Policy</span>
+      </h1>
+      <p class="s-sub">
+        <span data-de="Gemäß Art. 13 DSGVO · Stand: Februar 2026" data-en="Pursuant to Art. 13 GDPR · Last updated: February 2026 · The legally binding version is the German original.">Pursuant to Art. 13 GDPR · Last updated: February 2026 · The legally binding version is the German original.</span>
+      </p>
+    </header>
 
-  <!-- 1. Controller -->
-  <article class="legal-card" aria-labelledby="h-controller">
-    <h2 id="h-controller">
-      <span class="lang-de">1. Verantwortlicher</span>
-      <span class="lang-en">1. Data Controller</span>
-    </h2>
-    <div class="lang-de">
-      <p>Verantwortlicher im Sinne der DSGVO ist:</p>
-      <address>
-        <p><strong>Florian</strong><br>Göttingen, Deutschland</p>
-      </address>
-      <p>E-Mail: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
+    <!-- English note -->
+    <div class="note-callout lang-en fi fi-d2" role="note">
+      <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M236.8,188.09,149.35,36.22a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM120,104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm8,88a12,12,0,1,1,12-12A12,12,0,0,1,128,192Z"/></svg>
+      <p>The English translation is provided for convenience only. The legally binding version is the German original (switch to DE using the language toggle).</p>
     </div>
-    <div class="lang-en">
-      <p>The data controller pursuant to the GDPR is:</p>
-      <address>
-        <p><strong>Florian</strong><br>Göttingen, Germany</p>
-      </address>
-      <p>Email: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
-    </div>
-  </article>
 
-  <!-- 2. Scope -->
-  <article class="legal-card" aria-labelledby="h-scope">
-    <h2 id="h-scope">
-      <span class="lang-de">2. Anwendungsbereich</span>
-      <span class="lang-en">2. Scope</span>
-    </h2>
-    <div class="lang-de">
-      <p>Diese Datenschutzerklärung gilt für folgende öffentliche Webdienste:</p>
-      <ul>
-        <li><a href="https://infracraft.duckdns.org" target="_blank" rel="noopener">infracraft.duckdns.org</a> — Portfolio &amp; Homelab-Showcase</li>
-        <li><a href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener">nash87.github.io/infracraft-demos</a> — InfraCraft Technologie-Demos</li>
-        <li><a href="https://parkhub.duckdns.org" target="_blank" rel="noopener">parkhub.duckdns.org</a> — ParkHub Parkplatz-Management Demo</li>
+    <!-- 1. Controller -->
+    <article class="legal-card fi fi-d2" aria-labelledby="h-controller">
+      <p class="card-label" id="h-controller">
+        <span data-de="1. Verantwortlicher" data-en="1. Data Controller">1. Data Controller</span>
+      </p>
+      <div class="lang-de">
+        <p>Verantwortlicher im Sinne der DSGVO ist:</p>
+        <address>
+          <p><strong>Florian</strong><br>Göttingen, Deutschland</p>
+        </address>
+        <p>E-Mail: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
+      </div>
+      <div class="lang-en">
+        <p>The data controller pursuant to the GDPR is:</p>
+        <address>
+          <p><strong>Florian</strong><br>Göttingen, Germany</p>
+        </address>
+        <p>Email: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
+      </div>
+    </article>
+
+    <!-- 2. Scope -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-scope">
+      <p class="card-label" id="h-scope">
+        <span data-de="2. Anwendungsbereich" data-en="2. Scope">2. Scope</span>
+      </p>
+      <div class="lang-de">
+        <p>Diese Datenschutzerklärung gilt für folgende öffentliche Webdienste:</p>
+      </div>
+      <div class="lang-en">
+        <p>This privacy policy applies to the following public web services:</p>
+      </div>
+      <ul class="legal-list" style="margin-top:.5rem">
+        <li>
+          <a class="ext-link" href="https://infracraft.duckdns.org" target="_blank" rel="noopener noreferrer">infracraft.duckdns.org<svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          — <span data-de="Portfolio &amp; Homelab-Showcase" data-en="Portfolio &amp; Homelab Showcase">Portfolio &amp; Homelab Showcase</span>
+        </li>
+        <li>
+          <a class="ext-link" href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener noreferrer">nash87.github.io/infracraft-demos<svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          — <span data-de="InfraCraft Technologie-Demos" data-en="InfraCraft Technology Demos">InfraCraft Technology Demos</span>
+        </li>
+        <li>
+          <a class="ext-link" href="https://parkhub.duckdns.org" target="_blank" rel="noopener noreferrer">parkhub.duckdns.org<svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a>
+          — <span data-de="ParkHub Parkplatz-Management Demo" data-en="ParkHub Parking Management Demo">ParkHub Parking Management Demo</span>
+        </li>
       </ul>
-      <p>Abweichungen zwischen den Diensten sind in den jeweiligen Abschnitten kenntlich gemacht.</p>
-    </div>
-    <div class="lang-en">
-      <p>This privacy policy applies to the following public web services:</p>
-      <ul>
-        <li><a href="https://infracraft.duckdns.org" target="_blank" rel="noopener">infracraft.duckdns.org</a> — Portfolio &amp; Homelab Showcase</li>
-        <li><a href="https://nash87.github.io/infracraft-demos" target="_blank" rel="noopener">nash87.github.io/infracraft-demos</a> — InfraCraft Technology Demos</li>
-        <li><a href="https://parkhub.duckdns.org" target="_blank" rel="noopener">parkhub.duckdns.org</a> — ParkHub Parking Management Demo</li>
+      <p style="margin-top:.75rem">
+        <span data-de="Abweichungen zwischen den Diensten sind in den jeweiligen Abschnitten kenntlich gemacht." data-en="Service-specific differences are noted in the respective sections below.">Service-specific differences are noted in the respective sections below.</span>
+      </p>
+    </article>
+
+    <!-- 3. Hosting -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-hosting">
+      <p class="card-label" id="h-hosting">
+        <span data-de="3. Hosting" data-en="3. Hosting">3. Hosting</span>
+      </p>
+
+      <h3 data-de="3a. Selbst-gehostet — infracraft &amp; parkhub" data-en="3a. Self-Hosted — infracraft &amp; parkhub">3a. Self-Hosted — infracraft &amp; parkhub</h3>
+      <div class="lang-de">
+        <p>Die Websites <strong>infracraft.duckdns.org</strong> und <strong>parkhub.duckdns.org</strong> werden auf einem selbst betriebenen Kubernetes-Cluster auf lokaler Hardware (Göttingen) bereitgestellt. Es findet kein Hosting durch externe Cloud-Anbieter statt.</p>
+        <p>Beim Aufruf dieser Websites verarbeitet der Webserver automatisch folgende technische Daten: IP-Adresse, Browsertyp und -version, Betriebssystem, aufgerufene URL, HTTP-Statuscode sowie Datum und Uhrzeit des Zugriffs (Server-Logdaten).</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung und Absicherung der Website).<br>
+        <strong>Speicherdauer:</strong> 7 Tage. Eine Weitergabe an Dritte erfolgt nicht.</p>
+      </div>
+      <div class="lang-en">
+        <p>The websites <strong>infracraft.duckdns.org</strong> and <strong>parkhub.duckdns.org</strong> are hosted on a self-operated Kubernetes cluster on local hardware (Göttingen, Germany). No external cloud hosting provider is used.</p>
+        <p>When accessing these websites, the web server automatically processes the following technical data: IP address, browser type and version, operating system, requested URL, HTTP status code, and date/time of access (server log data).</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in providing and securing the website).<br>
+        <strong>Retention period:</strong> 7 days. No disclosure to third parties.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h3 data-de="3b. GitHub Pages — infracraft-demos" data-en="3b. GitHub Pages — infracraft-demos">3b. GitHub Pages — infracraft-demos</h3>
+      <div class="lang-de">
+        <p>Die Website <strong>nash87.github.io/infracraft-demos</strong> wird über <strong>GitHub Pages</strong> bereitgestellt, einem Dienst von GitHub Inc. (Microsoft Corp.), 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA.</p>
+        <p>Beim Aufruf verarbeitet GitHub automatisch Server-Logdaten (IP-Adresse, Browsertyp, aufgerufene Seite, Datum/Uhrzeit). GitHub handelt insoweit als eigenverantwortlicher Verarbeiter auf Grundlage des EU-US-Datenschutzrahmens (Data Privacy Framework).</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.<br>
+        Datenschutzerklärung GitHub: <a class="ext-link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">docs.github.com<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+      <div class="lang-en">
+        <p>The website <strong>nash87.github.io/infracraft-demos</strong> is hosted via <strong>GitHub Pages</strong>, a service of GitHub Inc. (Microsoft Corp.), 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA.</p>
+        <p>When you access the site, GitHub automatically processes server log data (IP address, browser type, requested page, date/time). GitHub acts as an independent controller under the EU-US Data Privacy Framework.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR.<br>
+        GitHub Privacy Statement: <a class="ext-link" href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">docs.github.com<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+    </article>
+
+    <!-- 4. Web fonts -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-fonts">
+      <p class="card-label" id="h-fonts">
+        <span data-de="4. Schriftarten — Bunny Fonts" data-en="4. Web Fonts — Bunny Fonts">4. Web Fonts — Bunny Fonts</span>
+      </p>
+      <div class="lang-de">
+        <p>Alle genannten Webdienste laden Schriftarten über <strong>Bunny Fonts</strong> (bunny.net), einem DSGVO-konformen Font-Hosting-Dienst mit Servern in der EU (Österreich/Slowenien). Beim Laden der Schriftarten stellt Ihr Browser eine Verbindung zu Servern von BunnyWay d.o.o. her. Laut Anbieter werden dabei keine personenbezogenen Daten dauerhaft gespeichert.</p>
+        <p>Anbieter: BunnyWay d.o.o., Cesta komandanta Staneta 4A, SI-1215 Medvode, Slowenien · <a class="ext-link" href="https://bunny.net/privacy" target="_blank" rel="noopener noreferrer">bunny.net/privacy<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlichem Schriftbild bei gleichzeitig EU-konformem Anbieter).</p>
+      </div>
+      <div class="lang-en">
+        <p>All listed web services load fonts via <strong>Bunny Fonts</strong> (bunny.net), a GDPR-compliant font hosting service with servers in the EU (Austria/Slovenia). When loading fonts, your browser connects to servers of BunnyWay d.o.o. According to the provider, no personal data is permanently stored.</p>
+        <p>Provider: BunnyWay d.o.o., Cesta komandanta Staneta 4A, SI-1215 Medvode, Slovenia · <a class="ext-link" href="https://bunny.net/privacy" target="_blank" rel="noopener noreferrer">bunny.net/privacy<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in consistent typography using an EU-compliant provider).</p>
+      </div>
+    </article>
+
+    <!-- 5. infracraft specific -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-infracraft">
+      <p class="card-label" id="h-infracraft">
+        <span data-de="5. infracraft.duckdns.org — Spezifisch" data-en="5. infracraft.duckdns.org — Specific">5. infracraft.duckdns.org — Specific</span>
+      </p>
+
+      <h3 data-de="Wetterdaten — Open-Meteo" data-en="Weather Data — Open-Meteo">Weather Data — Open-Meteo</h3>
+      <div class="lang-de">
+        <p>Diese Website ruft aktuelle Wetterdaten über die API von <strong>Open-Meteo</strong> ab. Anbieter: Open-Meteo GmbH, Hauptgasse 14, CH-4310 Rheinfelden, Schweiz. Die Schweiz gilt gemäß Angemessenheitsbeschluss der EU-Kommission als sicheres Drittland (Art. 45 DSGVO).</p>
+        <p>Es werden keine personenbezogenen Nutzerdaten an Open-Meteo übermittelt; lediglich Koordinaten (Standort Göttingen) für die Wetterabfrage. Laut Anbieter werden keine IP-Adressen dauerhaft gespeichert.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO · <a class="ext-link" href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">open-meteo.com/en/terms<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+      <div class="lang-en">
+        <p>This website retrieves current weather data via the <strong>Open-Meteo</strong> API. Provider: Open-Meteo GmbH, Hauptgasse 14, CH-4310 Rheinfelden, Switzerland. Switzerland is recognized as a safe third country under the EU Commission's adequacy decision (Art. 45 GDPR).</p>
+        <p>No personal user data is transmitted to Open-Meteo; only coordinates (Göttingen location) for the weather query. According to the provider, no IP addresses are permanently stored.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR · <a class="ext-link" href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">open-meteo.com/en/terms<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h3 data-de="Service Worker / Progressive Web App (PWA)" data-en="Service Worker / Progressive Web App (PWA)">Service Worker / Progressive Web App (PWA)</h3>
+      <div class="lang-de">
+        <p>Diese Website kann als Progressive Web App (PWA) installiert werden. Ein Service Worker speichert dabei Seitenressourcen (HTML, CSS, JavaScript, Schriftarten) lokal im Browser-Cache, um die Website auch offline nutzbar zu machen.</p>
+        <p>Es werden ausschließlich technische Seitenressourcen gespeichert — keine personenbezogenen Daten. Der Cache kann jederzeit über die Browsereinstellungen (Website-Daten → Löschen) entfernt werden.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Offline-Funktionalität und Ladeperformance).</p>
+      </div>
+      <div class="lang-en">
+        <p>This website can be installed as a Progressive Web App (PWA). A service worker stores page resources (HTML, CSS, JavaScript, fonts) locally in the browser cache, enabling offline use.</p>
+        <p>Only technical page resources are stored — no personal data. The cache can be removed at any time via browser settings (Site data → Clear).</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in offline functionality and load performance).</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h3 data-de="Keine weiteren Erhebungen (infracraft)" data-en="No Further Data Collection (infracraft)">No Further Data Collection (infracraft)</h3>
+      <div class="lang-de">
+        <p>infracraft.duckdns.org verwendet keine Nutzerkonten, keine Registrierung, keine Cookies und kein Tracking. Es werden keinerlei personenbezogene Daten über die oben genannten technischen Logdaten und Drittdienste hinaus erhoben.</p>
+      </div>
+      <div class="lang-en">
+        <p>infracraft.duckdns.org does not use user accounts, registration, cookies, or tracking. No personal data beyond the technical log data and third-party services described above is collected.</p>
+      </div>
+    </article>
+
+    <!-- 6. infracraft-demos specific -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-demos">
+      <p class="card-label" id="h-demos">
+        <span data-de="6. nash87.github.io/infracraft-demos — Spezifisch" data-en="6. nash87.github.io/infracraft-demos — Specific">6. nash87.github.io/infracraft-demos — Specific</span>
+      </p>
+
+      <h3 data-de="Lokale Speicherung (localStorage)" data-en="Local Storage (localStorage)">Local Storage (localStorage)</h3>
+      <div class="lang-de">
+        <p>Diese Website speichert beim Nutzen der Demo-Reset-Funktion zwei Einträge lokal in Ihrem Browser über die Web Storage API:</p>
+        <ul class="legal-list" style="margin:.5rem 0">
+          <li><span class="code">r-rust</span> — Zeitstempel des letzten Rust-Demo-Resets (Cooldown-Tracking)</li>
+          <li><span class="code">r-php</span> — Zeitstempel des letzten PHP-Demo-Resets (Cooldown-Tracking)</li>
+        </ul>
+        <p>Diese Werte verlassen Ihr Gerät nicht, werden nicht an Server übermittelt und enthalten keine personenbezogenen Daten. Zweck: Verhinderung mehrfachen Zurücksetzens innerhalb von 5 Minuten. Keine Einwilligung erforderlich (technisch notwendig).</p>
+      </div>
+      <div class="lang-en">
+        <p>This website stores two entries locally in your browser via the Web Storage API when using the demo reset function:</p>
+        <ul class="legal-list" style="margin:.5rem 0">
+          <li><span class="code">r-rust</span> — Timestamp of the last Rust demo reset (cooldown tracking)</li>
+          <li><span class="code">r-php</span> — Timestamp of the last PHP demo reset (cooldown tracking)</li>
+        </ul>
+        <p>These values do not leave your device, are not transmitted to any server, and contain no personal data. Purpose: preventing multiple resets within 5 minutes. No consent required (technically necessary).</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h3 data-de="Demo-Reset-Funktion — Render.com" data-en="Demo Reset Function — Render.com">Demo Reset Function — Render.com</h3>
+      <div class="lang-de">
+        <p>Beim Klick auf „Reset Demo Now" sendet Ihr Browser eine HTTP-POST-Anfrage an einen Deploy-Hook-Endpunkt von <strong>Render Inc.</strong>, 525 Brannan St., San Francisco, CA 94107, USA. Dabei wird technisch bedingt Ihre IP-Adresse an Render übermittelt.</p>
+        <p>Diese Anfrage erfolgt ausschließlich auf aktiven Wunsch und dient keinem Tracking-Zweck.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Ausführung einer Handlung auf Nutzeranfrage) · <a class="ext-link" href="https://render.com/privacy" target="_blank" rel="noopener noreferrer">render.com/privacy<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+      <div class="lang-en">
+        <p>When clicking "Reset Demo Now", your browser sends an HTTP POST request to a deploy hook endpoint of <strong>Render Inc.</strong>, 525 Brannan St., San Francisco, CA 94107, USA. Your IP address is technically transmitted to Render as part of this request.</p>
+        <p>This request is made exclusively at the user's active request and serves no tracking purpose.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (execution of an action at user request) · <a class="ext-link" href="https://render.com/privacy" target="_blank" rel="noopener noreferrer">render.com/privacy<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+    </article>
+
+    <!-- 7. parkhub specific -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-parkhub">
+      <p class="card-label" id="h-parkhub">
+        <span data-de="7. parkhub.duckdns.org — Spezifisch" data-en="7. parkhub.duckdns.org — Specific">7. parkhub.duckdns.org — Specific</span>
+      </p>
+      <div class="lang-de">
+        <p>ParkHub ist eine Demo-Applikation für Parkplatz-Management. Bei der Nutzung des vollen Funktionsumfangs werden personenbezogene Daten verarbeitet.</p>
+      </div>
+      <div class="lang-en">
+        <p>ParkHub is a demo application for parking management. Using the full functionality involves processing of personal data.</p>
+      </div>
+
+      <h3 data-de="Nutzerkonten (Registrierung &amp; Login)" data-en="User Accounts (Registration &amp; Login)">User Accounts (Registration &amp; Login)</h3>
+      <div class="lang-de">
+        <p>Zur Nutzung von ParkHub ist eine Registrierung erforderlich. Dabei werden folgende Daten erhoben und gespeichert: E-Mail-Adresse, Passwort (als bcrypt-Hash, nie im Klartext), Erstellungsdatum des Kontos.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Nutzungsvertrags).<br>
+        <strong>Speicherort:</strong> PostgreSQL-Datenbank auf eigenem Server (selbst betriebener K8s-Cluster, Göttingen).<br>
+        <strong>Speicherdauer:</strong> Bis zur Löschung des Kontos durch den Nutzer oder den Betreiber.</p>
+      </div>
+      <div class="lang-en">
+        <p>A registration is required to use ParkHub. The following data is collected and stored: email address, password (as bcrypt hash, never in plain text), account creation date.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of the usage contract).<br>
+        <strong>Storage location:</strong> PostgreSQL database on own server (self-operated K8s cluster, Göttingen).<br>
+        <strong>Retention period:</strong> Until the account is deleted by the user or operator.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h3 data-de="Buchungs- und Fahrzeugdaten" data-en="Booking and Vehicle Data">Booking and Vehicle Data</h3>
+      <div class="lang-de">
+        <p>Bei Nutzung der Buchungsfunktion werden Buchungsdaten (Parkplatz, Zeitraum) sowie Fahrzeugkennzeichen gespeichert. Diese Daten sind für die Kernfunktion der Anwendung erforderlich.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO · <strong>Speicherdauer:</strong> Bis zur Kontolöschung.</p>
+      </div>
+      <div class="lang-en">
+        <p>When using the booking function, booking data (parking space, time period) and vehicle license plates are stored. This data is necessary for the core functionality of the application.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR · <strong>Retention period:</strong> Until account deletion.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h3 data-de="E-Mail-Benachrichtigungen" data-en="Email Notifications">Email Notifications</h3>
+      <div class="lang-de">
+        <p>ParkHub versendet transaktionale E-Mails (z.B. Buchungsbestätigung, Passwort-Reset). Es erfolgt kein Newsletter oder Marketing-E-Mail-Versand.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+      </div>
+      <div class="lang-en">
+        <p>ParkHub sends transactional emails (e.g., booking confirmation, password reset). No newsletters or marketing emails are sent.</p>
+        <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <h3 data-de="Session-Cookie" data-en="Session Cookie">Session Cookie</h3>
+      <div class="lang-de">
+        <p>Für den Login-Status wird ein technisch notwendiges HTTP-Only-Session-Cookie gesetzt. Dieses Cookie enthält keine personenbezogenen Daten, sondern lediglich eine zufällige Session-ID. Es ist kein Tracking-Cookie.</p>
+        <p><strong>Gültigkeit:</strong> Bis zum Schließen des Browsers (Session-Cookie).<br>
+        <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) · Keine Einwilligung erforderlich (technisch notwendig).</p>
+      </div>
+      <div class="lang-en">
+        <p>A technically necessary HTTP-only session cookie is set to maintain login status. This cookie contains no personal data, only a random session ID. It is not a tracking cookie.</p>
+        <p><strong>Validity:</strong> Until the browser is closed (session cookie).<br>
+        <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest) · No consent required (technically necessary).</p>
+      </div>
+    </article>
+
+    <!-- 8. No further collection -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-nothing-else">
+      <p class="card-label" id="h-nothing-else">
+        <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg>
+        <span data-de="8. Keine weiteren Datenerhebungen" data-en="8. No Further Data Collection">8. No Further Data Collection</span>
+      </p>
+      <div class="lang-de">
+        <p>Alle oben genannten Webdienste verwenden:</p>
+      </div>
+      <div class="lang-en">
+        <p>All web services listed above use:</p>
+      </div>
+
+      <ul class="check-list" style="margin-top:.5rem">
+        <li>
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg>
+          <span><strong data-de="Keine" data-en="No">No</strong> <span data-de="Analyse- oder Tracking-Tools (z.B. Google Analytics, Matomo)" data-en="analytics or tracking tools (e.g., Google Analytics, Matomo)">analytics or tracking tools (e.g., Google Analytics, Matomo)</span></span>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg>
+          <span><strong data-de="Keine" data-en="No">No</strong> <span data-de="Third-Party-Werbung oder Social-Media-Einbindungen" data-en="third-party advertising or social media integrations">third-party advertising or social media integrations</span></span>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg>
+          <span><strong data-de="Keine" data-en="No">No</strong> <span data-de="KI-gestützte Profilbildung oder automatisierte Entscheidungsfindung" data-en="AI-based profiling or automated decision-making">AI-based profiling or automated decision-making</span></span>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg>
+          <span><strong data-de="Keine" data-en="No">No</strong> <span data-de="Datenweitergabe an Dritte außerhalb der in dieser Erklärung genannten Dienste" data-en="data disclosure to third parties beyond the services named in this policy">data disclosure to third parties beyond the services named in this policy</span></span>
+        </li>
+        <li>
+          <svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg>
+          <span><strong data-de="Keine" data-en="No">No</strong> <span data-de="Weitergabe in Drittländer ohne angemessenes Schutzniveau" data-en="transfers to third countries without an adequate level of protection">transfers to third countries without an adequate level of protection</span></span>
+        </li>
       </ul>
-      <p>Service-specific differences are noted in the respective sections below.</p>
-    </div>
-  </article>
+    </article>
 
-  <!-- 3. Hosting -->
-  <article class="legal-card" aria-labelledby="h-hosting">
-    <h2 id="h-hosting">
-      <span class="lang-de">3. Hosting</span>
-      <span class="lang-en">3. Hosting</span>
-    </h2>
+    <!-- 9. Rights -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-rights">
+      <p class="card-label" id="h-rights">
+        <span data-de="9. Ihre Rechte (Art. 15–22 DSGVO)" data-en="9. Your Rights (Art. 15–22 GDPR)">9. Your Rights (Art. 15–22 GDPR)</span>
+      </p>
+      <div class="lang-de">
+        <p>Sie haben gegenüber dem Verantwortlichen folgende Rechte:</p>
+        <ul class="legal-list" style="margin:.5rem 0 .75rem">
+          <li><strong>Auskunft</strong> über verarbeitete personenbezogene Daten (Art. 15)</li>
+          <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16)</li>
+          <li><strong>Löschung</strong> Ihrer Daten (Art. 17 „Recht auf Vergessenwerden")</li>
+          <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18)</li>
+          <li><strong>Datenübertragbarkeit</strong> in einem maschinenlesbaren Format (Art. 20)</li>
+          <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21)</li>
+        </ul>
+        <p>Zur Ausübung Ihrer Rechte wenden Sie sich per E-Mail an: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
+        <p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Zuständige Behörde für Niedersachsen: <strong>Landesbeauftragte für den Datenschutz Niedersachsen (LfD)</strong>, Prinzenstraße 5, 30159 Hannover · <a class="ext-link" href="https://lfd.niedersachsen.de" target="_blank" rel="noopener noreferrer">lfd.niedersachsen.de<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+      <div class="lang-en">
+        <p>You have the following rights with respect to the data controller:</p>
+        <ul class="legal-list" style="margin:.5rem 0 .75rem">
+          <li><strong>Access</strong> to your processed personal data (Art. 15)</li>
+          <li><strong>Rectification</strong> of inaccurate data (Art. 16)</li>
+          <li><strong>Erasure</strong> of your data (Art. 17 "right to be forgotten")</li>
+          <li><strong>Restriction</strong> of processing (Art. 18)</li>
+          <li><strong>Data portability</strong> in a machine-readable format (Art. 20)</li>
+          <li><strong>Objection</strong> to processing (Art. 21)</li>
+        </ul>
+        <p>To exercise your rights, contact: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
+        <p>You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR). Competent authority for Lower Saxony: <strong>Landesbeauftragte für den Datenschutz Niedersachsen (LfD)</strong>, Prinzenstraße 5, 30159 Hannover, Germany · <a class="ext-link" href="https://lfd.niedersachsen.de" target="_blank" rel="noopener noreferrer">lfd.niedersachsen.de<svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L72.49,194.83a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></a></p>
+      </div>
+    </article>
 
-    <h3>
-      <span class="lang-de">3a. Selbst-gehostet — infracraft &amp; parkhub</span>
-      <span class="lang-en">3a. Self-Hosted — infracraft &amp; parkhub</span>
-    </h3>
-    <div class="lang-de">
-      <p>Die Websites <strong>infracraft.duckdns.org</strong> und <strong>parkhub.duckdns.org</strong> werden auf einem selbst betriebenen Kubernetes-Cluster auf lokaler Hardware (Göttingen) bereitgestellt. Es findet kein Hosting durch externe Cloud-Anbieter statt.</p>
-      <p>Beim Aufruf dieser Websites verarbeitet der Webserver automatisch folgende technische Daten: IP-Adresse, Browsertyp und -version, Betriebssystem, aufgerufene URL, HTTP-Statuscode sowie Datum und Uhrzeit des Zugriffs (Server-Logdaten).</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bereitstellung und Absicherung der Website).<br>
-      <strong>Speicherdauer:</strong> 7 Tage. Eine Weitergabe an Dritte erfolgt nicht.</p>
-    </div>
-    <div class="lang-en">
-      <p>The websites <strong>infracraft.duckdns.org</strong> and <strong>parkhub.duckdns.org</strong> are hosted on a self-operated Kubernetes cluster on local hardware (Göttingen, Germany). No external cloud hosting provider is used.</p>
-      <p>When accessing these websites, the web server automatically processes the following technical data: IP address, browser type and version, operating system, requested URL, HTTP status code, and date/time of access (server log data).</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in providing and securing the website).<br>
-      <strong>Retention period:</strong> 7 days. No disclosure to third parties.</p>
-    </div>
+    <!-- 10. Currency -->
+    <article class="legal-card fi fi-d3" aria-labelledby="h-currency">
+      <p class="card-label" id="h-currency">
+        <span data-de="10. Aktualität dieser Erklärung" data-en="10. Currency of This Policy">10. Currency of This Policy</span>
+      </p>
+      <div class="lang-de">
+        <p>Diese Datenschutzerklärung hat den Stand <strong>Februar 2026</strong> und wird bei Änderungen der Webdienste, der eingesetzten Technologien oder der Rechtslage aktualisiert. Die jeweils aktuelle Fassung ist unter <a href="https://nash87.github.io/legal/datenschutz.html">nash87.github.io/legal/datenschutz.html</a> abrufbar.</p>
+      </div>
+      <div class="lang-en">
+        <p>This privacy policy was last updated in <strong>February 2026</strong> and will be updated when the web services, technologies used, or legal requirements change. The current version is available at <a href="https://nash87.github.io/legal/datenschutz.html">nash87.github.io/legal/datenschutz.html</a>.</p>
+      </div>
+    </article>
 
-    <h3>
-      <span class="lang-de">3b. GitHub Pages — infracraft-demos</span>
-      <span class="lang-en">3b. GitHub Pages — infracraft-demos</span>
-    </h3>
-    <div class="lang-de">
-      <p>Die Website <strong>nash87.github.io/infracraft-demos</strong> wird über <strong>GitHub Pages</strong> bereitgestellt, einem Dienst von GitHub Inc. (Microsoft Corp.), 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA.</p>
-      <p>Beim Aufruf verarbeitet GitHub automatisch Server-Logdaten (IP-Adresse, Browsertyp, aufgerufene Seite, Datum/Uhrzeit). GitHub handelt insoweit als eigenverantwortlicher Verarbeiter auf Grundlage des EU-US-Datenschutzrahmens (Data Privacy Framework).</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO.<br>
-      Datenschutzerklärung GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">docs.github.com</a></p>
-    </div>
-    <div class="lang-en">
-      <p>The website <strong>nash87.github.io/infracraft-demos</strong> is hosted via <strong>GitHub Pages</strong>, a service of GitHub Inc. (Microsoft Corp.), 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA.</p>
-      <p>When you access the site, GitHub automatically processes server log data (IP address, browser type, requested page, date/time). GitHub acts as an independent controller under the EU-US Data Privacy Framework.</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR.<br>
-      GitHub Privacy Statement: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">docs.github.com</a></p>
-    </div>
-  </article>
-
-  <!-- 4. Web fonts -->
-  <article class="legal-card" aria-labelledby="h-fonts">
-    <h2 id="h-fonts">
-      <span class="lang-de">4. Schriftarten — Bunny Fonts</span>
-      <span class="lang-en">4. Web Fonts — Bunny Fonts</span>
-    </h2>
-    <div class="lang-de">
-      <p>Alle genannten Webdienste laden Schriftarten über <strong>Bunny Fonts</strong> (bunny.net), einem DSGVO-konformen Font-Hosting-Dienst mit Servern in der EU (Österreich/Slowenien). Beim Laden der Schriftarten stellt Ihr Browser eine Verbindung zu Servern von BunnyWay d.o.o. her. Laut Anbieter werden dabei keine personenbezogenen Daten dauerhaft gespeichert.</p>
-      <p>Anbieter: BunnyWay d.o.o., Cesta komandanta Staneta 4A, SI-1215 Medvode, Slowenien · <a href="https://bunny.net/privacy" target="_blank" rel="noopener">bunny.net/privacy</a></p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlichem Schriftbild bei gleichzeitig EU-konformem Anbieter).</p>
-    </div>
-    <div class="lang-en">
-      <p>All listed web services load fonts via <strong>Bunny Fonts</strong> (bunny.net), a GDPR-compliant font hosting service with servers in the EU (Austria/Slovenia). When loading fonts, your browser connects to servers of BunnyWay d.o.o. According to the provider, no personal data is permanently stored.</p>
-      <p>Provider: BunnyWay d.o.o., Cesta komandanta Staneta 4A, SI-1215 Medvode, Slovenia · <a href="https://bunny.net/privacy" target="_blank" rel="noopener">bunny.net/privacy</a></p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in consistent typography using an EU-compliant provider).</p>
-    </div>
-  </article>
-
-  <!-- 5. infracraft-specific -->
-  <article class="legal-card" aria-labelledby="h-infracraft">
-    <h2 id="h-infracraft">
-      <span class="lang-de">5. infracraft.duckdns.org — Spezifisch</span>
-      <span class="lang-en">5. infracraft.duckdns.org — Specific</span>
-    </h2>
-
-    <h3>
-      <span class="lang-de">Wetterdaten — Open-Meteo</span>
-      <span class="lang-en">Weather Data — Open-Meteo</span>
-    </h3>
-    <div class="lang-de">
-      <p>Diese Website ruft aktuelle Wetterdaten über die API von <strong>Open-Meteo</strong> ab. Anbieter: Open-Meteo GmbH, Hauptgasse 14, CH-4310 Rheinfelden, Schweiz. Die Schweiz gilt gemäß Angemessenheitsbeschluss der EU-Kommission als sicheres Drittland (Art. 45 DSGVO).</p>
-      <p>Es werden keine personenbezogenen Nutzerdaten an Open-Meteo übermittelt; lediglich Koordinaten (Standort Göttingen) für die Wetterabfrage. Laut Anbieter werden keine IP-Adressen dauerhaft gespeichert.</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">open-meteo.com/en/terms</a></p>
-    </div>
-    <div class="lang-en">
-      <p>This website retrieves current weather data via the <strong>Open-Meteo</strong> API. Provider: Open-Meteo GmbH, Hauptgasse 14, CH-4310 Rheinfelden, Switzerland. Switzerland is recognized as a safe third country under the EU Commission's adequacy decision (Art. 45 GDPR).</p>
-      <p>No personal user data is transmitted to Open-Meteo; only coordinates (Göttingen location) for the weather query. According to the provider, no IP addresses are permanently stored.</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">open-meteo.com/en/terms</a></p>
-    </div>
-
-    <h3>
-      <span class="lang-de">Service Worker / Progressive Web App (PWA)</span>
-      <span class="lang-en">Service Worker / Progressive Web App (PWA)</span>
-    </h3>
-    <div class="lang-de">
-      <p>Diese Website kann als Progressive Web App (PWA) installiert werden. Ein Service Worker speichert dabei Seitenressourcen (HTML, CSS, JavaScript, Schriftarten) lokal im Browser-Cache, um die Website auch offline nutzbar zu machen.</p>
-      <p>Es werden ausschließlich technische Seitenressourcen gespeichert — keine personenbezogenen Daten. Der Cache kann jederzeit über die Browsereinstellungen (Website-Daten → Löschen) entfernt werden.</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Offline-Funktionalität und Ladeperformance).</p>
-    </div>
-    <div class="lang-en">
-      <p>This website can be installed as a Progressive Web App (PWA). A service worker stores page resources (HTML, CSS, JavaScript, fonts) locally in the browser cache, enabling offline use.</p>
-      <p>Only technical page resources are stored — no personal data. The cache can be removed at any time via browser settings (Site data → Clear).</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in offline functionality and load performance).</p>
-    </div>
-
-    <h3>
-      <span class="lang-de">Keine weiteren Erhebungen (infracraft)</span>
-      <span class="lang-en">No Further Data Collection (infracraft)</span>
-    </h3>
-    <div class="lang-de">
-      <p>infracraft.duckdns.org verwendet keine Nutzerkonten, keine Registrierung, keine Cookies und kein Tracking. Es werden keinerlei personenbezogene Daten über die oben genannten technischen Logdaten und Drittdienste hinaus erhoben.</p>
-    </div>
-    <div class="lang-en">
-      <p>infracraft.duckdns.org does not use user accounts, registration, cookies, or tracking. No personal data beyond the technical log data and third-party services described above is collected.</p>
-    </div>
-  </article>
-
-  <!-- 6. infracraft-demos specific -->
-  <article class="legal-card" aria-labelledby="h-demos">
-    <h2 id="h-demos">
-      <span class="lang-de">6. nash87.github.io/infracraft-demos — Spezifisch</span>
-      <span class="lang-en">6. nash87.github.io/infracraft-demos — Specific</span>
-    </h2>
-
-    <h3>
-      <span class="lang-de">Lokale Speicherung (localStorage)</span>
-      <span class="lang-en">Local Storage (localStorage)</span>
-    </h3>
-    <div class="lang-de">
-      <p>Diese Website speichert beim Nutzen der Demo-Reset-Funktion zwei Einträge lokal in Ihrem Browser über die Web Storage API:</p>
-      <ul>
-        <li><span class="code">r-rust</span> — Zeitstempel des letzten Rust-Demo-Resets (Cooldown-Tracking)</li>
-        <li><span class="code">r-php</span> — Zeitstempel des letzten PHP-Demo-Resets (Cooldown-Tracking)</li>
-      </ul>
-      <p>Diese Werte verlassen Ihr Gerät nicht, werden nicht an Server übermittelt und enthalten keine personenbezogenen Daten. Zweck: Verhinderung mehrfachen Zurücksetzens innerhalb von 5 Minuten. Keine Einwilligung erforderlich (technisch notwendig).</p>
-    </div>
-    <div class="lang-en">
-      <p>This website stores two entries locally in your browser via the Web Storage API when using the demo reset function:</p>
-      <ul>
-        <li><span class="code">r-rust</span> — Timestamp of the last Rust demo reset (cooldown tracking)</li>
-        <li><span class="code">r-php</span> — Timestamp of the last PHP demo reset (cooldown tracking)</li>
-      </ul>
-      <p>These values do not leave your device, are not transmitted to any server, and contain no personal data. Purpose: preventing multiple resets within 5 minutes. No consent required (technically necessary).</p>
-    </div>
-
-    <h3>
-      <span class="lang-de">Demo-Reset-Funktion — Render.com</span>
-      <span class="lang-en">Demo Reset Function — Render.com</span>
-    </h3>
-    <div class="lang-de">
-      <p>Beim Klick auf „Reset Demo Now" sendet Ihr Browser eine HTTP-POST-Anfrage an einen Deploy-Hook-Endpunkt von <strong>Render Inc.</strong>, 525 Brannan St., San Francisco, CA 94107, USA. Dabei wird technisch bedingt Ihre IP-Adresse an Render übermittelt.</p>
-      <p>Diese Anfrage erfolgt ausschließlich auf aktiven Wunsch und dient keinem Tracking-Zweck.</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Ausführung einer Handlung auf Nutzeranfrage) · <a href="https://render.com/privacy" target="_blank" rel="noopener">render.com/privacy</a></p>
-    </div>
-    <div class="lang-en">
-      <p>When clicking "Reset Demo Now", your browser sends an HTTP POST request to a deploy hook endpoint of <strong>Render Inc.</strong>, 525 Brannan St., San Francisco, CA 94107, USA. Your IP address is technically transmitted to Render as part of this request.</p>
-      <p>This request is made exclusively at the user's active request and serves no tracking purpose.</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (execution of an action at user request) · <a href="https://render.com/privacy" target="_blank" rel="noopener">render.com/privacy</a></p>
-    </div>
-  </article>
-
-  <!-- 7. parkhub specific -->
-  <article class="legal-card" aria-labelledby="h-parkhub">
-    <h2 id="h-parkhub">
-      <span class="lang-de">7. parkhub.duckdns.org — Spezifisch</span>
-      <span class="lang-en">7. parkhub.duckdns.org — Specific</span>
-    </h2>
-    <div class="lang-de">
-      <p>ParkHub ist eine Demo-Applikation für Parkplatz-Management. Bei der Nutzung des vollen Funktionsumfangs werden personenbezogene Daten verarbeitet.</p>
-    </div>
-    <div class="lang-en">
-      <p>ParkHub is a demo application for parking management. Using the full functionality involves processing of personal data.</p>
-    </div>
-
-    <h3>
-      <span class="lang-de">Nutzerkonten (Registrierung &amp; Login)</span>
-      <span class="lang-en">User Accounts (Registration &amp; Login)</span>
-    </h3>
-    <div class="lang-de">
-      <p>Zur Nutzung von ParkHub ist eine Registrierung erforderlich. Dabei werden folgende Daten erhoben und gespeichert: E-Mail-Adresse, Passwort (als bcrypt-Hash, nie im Klartext), Erstellungsdatum des Kontos.</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Erfüllung des Nutzungsvertrags).<br>
-      <strong>Speicherort:</strong> PostgreSQL-Datenbank auf eigenem Server (selbst betriebener K8s-Cluster, Göttingen).<br>
-      <strong>Speicherdauer:</strong> Bis zur Löschung des Kontos durch den Nutzer oder den Betreiber.</p>
-    </div>
-    <div class="lang-en">
-      <p>A registration is required to use ParkHub. The following data is collected and stored: email address, password (as bcrypt hash, never in plain text), account creation date.</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (performance of the usage contract).<br>
-      <strong>Storage location:</strong> PostgreSQL database on own server (self-operated K8s cluster, Göttingen).<br>
-      <strong>Retention period:</strong> Until the account is deleted by the user or operator.</p>
-    </div>
-
-    <h3>
-      <span class="lang-de">Buchungs- und Fahrzeugdaten</span>
-      <span class="lang-en">Booking and Vehicle Data</span>
-    </h3>
-    <div class="lang-de">
-      <p>Bei Nutzung der Buchungsfunktion werden Buchungsdaten (Parkplatz, Zeitraum) sowie Fahrzeugkennzeichen gespeichert. Diese Daten sind für die Kernfunktion der Anwendung erforderlich.</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO · <strong>Speicherdauer:</strong> Bis zur Kontolöschung.</p>
-    </div>
-    <div class="lang-en">
-      <p>When using the booking function, booking data (parking space, time period) and vehicle license plates are stored. This data is necessary for the core functionality of the application.</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR · <strong>Retention period:</strong> Until account deletion.</p>
-    </div>
-
-    <h3>
-      <span class="lang-de">E-Mail-Benachrichtigungen</span>
-      <span class="lang-en">Email Notifications</span>
-    </h3>
-    <div class="lang-de">
-      <p>ParkHub versendet transaktionale E-Mails (z.B. Buchungsbestätigung, Passwort-Reset). Es erfolgt kein Newsletter oder Marketing-E-Mail-Versand.</p>
-      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
-    </div>
-    <div class="lang-en">
-      <p>ParkHub sends transactional emails (e.g., booking confirmation, password reset). No newsletters or marketing emails are sent.</p>
-      <p><strong>Legal basis:</strong> Art. 6(1)(b) GDPR.</p>
-    </div>
-
-    <h3>
-      <span class="lang-de">Session-Cookie</span>
-      <span class="lang-en">Session Cookie</span>
-    </h3>
-    <div class="lang-de">
-      <p>Für den Login-Status wird ein technisch notwendiges HTTP-Only-Session-Cookie gesetzt. Dieses Cookie enthält keine personenbezogenen Daten, sondern lediglich eine zufällige Session-ID. Es ist kein Tracking-Cookie.</p>
-      <p><strong>Gültigkeit:</strong> Bis zum Schließen des Browsers (Session-Cookie).<br>
-      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse) · Keine Einwilligung erforderlich (technisch notwendig).</p>
-    </div>
-    <div class="lang-en">
-      <p>A technically necessary HTTP-only session cookie is set to maintain login status. This cookie contains no personal data, only a random session ID. It is not a tracking cookie.</p>
-      <p><strong>Validity:</strong> Until the browser is closed (session cookie).<br>
-      <strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest) · No consent required (technically necessary).</p>
-    </div>
-  </article>
-
-  <!-- 8. No further collection -->
-  <article class="legal-card" aria-labelledby="h-nothing-else">
-    <h2 id="h-nothing-else">
-      <span class="lang-de">8. Keine weiteren Datenerhebungen</span>
-      <span class="lang-en">8. No Further Data Collection</span>
-    </h2>
-    <div class="lang-de">
-      <p>Alle oben genannten Webdienste verwenden:</p>
-      <ul>
-        <li>✓ <strong>Keine</strong> Analyse- oder Tracking-Tools (z.B. Google Analytics, Matomo)</li>
-        <li>✓ <strong>Keine</strong> Third-Party-Werbung oder Social-Media-Einbindungen</li>
-        <li>✓ <strong>Keine</strong> KI-gestützte Profilbildung oder automatisierte Entscheidungsfindung</li>
-        <li>✓ <strong>Keine</strong> Datenweitergabe an Dritte außerhalb der in dieser Erklärung genannten Dienste</li>
-        <li>✓ <strong>Keine</strong> Weitergabe in Drittländer ohne angemessenes Schutzniveau</li>
-      </ul>
-    </div>
-    <div class="lang-en">
-      <p>All web services listed above use:</p>
-      <ul>
-        <li>✓ <strong>No</strong> analytics or tracking tools (e.g., Google Analytics, Matomo)</li>
-        <li>✓ <strong>No</strong> third-party advertising or social media integrations</li>
-        <li>✓ <strong>No</strong> AI-based profiling or automated decision-making</li>
-        <li>✓ <strong>No</strong> data disclosure to third parties beyond the services named in this policy</li>
-        <li>✓ <strong>No</strong> transfers to third countries without an adequate level of protection</li>
-      </ul>
-    </div>
-  </article>
-
-  <!-- 9. Rights -->
-  <article class="legal-card" aria-labelledby="h-rights">
-    <h2 id="h-rights">
-      <span class="lang-de">9. Ihre Rechte (Art. 15–22 DSGVO)</span>
-      <span class="lang-en">9. Your Rights (Art. 15–22 GDPR)</span>
-    </h2>
-    <div class="lang-de">
-      <p>Sie haben gegenüber dem Verantwortlichen folgende Rechte:</p>
-      <ul>
-        <li><strong>Auskunft</strong> über verarbeitete personenbezogene Daten (Art. 15)</li>
-        <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16)</li>
-        <li><strong>Löschung</strong> Ihrer Daten (Art. 17 „Recht auf Vergessenwerden")</li>
-        <li><strong>Einschränkung</strong> der Verarbeitung (Art. 18)</li>
-        <li><strong>Datenübertragbarkeit</strong> in einem maschinenlesbaren Format (Art. 20)</li>
-        <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21)</li>
-      </ul>
-      <p>Zur Ausübung Ihrer Rechte wenden Sie sich per E-Mail an: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
-      <p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO). Zuständige Behörde für Niedersachsen: <strong>Landesbeauftragte für den Datenschutz Niedersachsen (LfD)</strong>, Prinzenstraße 5, 30159 Hannover · <a href="https://lfd.niedersachsen.de" target="_blank" rel="noopener">lfd.niedersachsen.de</a></p>
-    </div>
-    <div class="lang-en">
-      <p>You have the following rights with respect to the data controller:</p>
-      <ul>
-        <li><strong>Access</strong> to your processed personal data (Art. 15)</li>
-        <li><strong>Rectification</strong> of inaccurate data (Art. 16)</li>
-        <li><strong>Erasure</strong> of your data (Art. 17 "right to be forgotten")</li>
-        <li><strong>Restriction</strong> of processing (Art. 18)</li>
-        <li><strong>Data portability</strong> in a machine-readable format (Art. 20)</li>
-        <li><strong>Objection</strong> to processing (Art. 21)</li>
-      </ul>
-      <p>To exercise your rights, contact: <a href="mailto:fschulz0787@gmail.com">fschulz0787@gmail.com</a></p>
-      <p>You also have the right to lodge a complaint with a supervisory authority (Art. 77 GDPR). Competent authority for Lower Saxony: <strong>Landesbeauftragte für den Datenschutz Niedersachsen (LfD)</strong>, Prinzenstraße 5, 30159 Hannover, Germany · <a href="https://lfd.niedersachsen.de" target="_blank" rel="noopener">lfd.niedersachsen.de</a></p>
-    </div>
-  </article>
-
-  <!-- 10. Currency -->
-  <article class="legal-card" aria-labelledby="h-currency">
-    <h2 id="h-currency">
-      <span class="lang-de">10. Aktualität dieser Erklärung</span>
-      <span class="lang-en">10. Currency of This Policy</span>
-    </h2>
-    <div class="lang-de">
-      <p>Diese Datenschutzerklärung hat den Stand <strong>Februar 2026</strong> und wird bei Änderungen der Webdienste, der eingesetzten Technologien oder der Rechtslage aktualisiert. Die jeweils aktuelle Fassung ist unter <a href="https://nash87.github.io/legal/datenschutz.html">nash87.github.io/legal/datenschutz.html</a> abrufbar.</p>
-    </div>
-    <div class="lang-en">
-      <p>This privacy policy was last updated in <strong>February 2026</strong> and will be updated when the web services, technologies used, or legal requirements change. The current version is available at <a href="https://nash87.github.io/legal/datenschutz.html">nash87.github.io/legal/datenschutz.html</a>.</p>
-    </div>
-  </article>
-
+  </div>
 </main>
 
+<!-- Footer -->
 <footer role="contentinfo">
-  <div class="footer-inner">
+  <div class="footer-in">
     <p>© 2026 Florian</p>
     <nav class="footer-links" aria-label="Legal navigation">
       <a href="./">
-        <span class="lang-de">Übersicht</span>
-        <span class="lang-en">Overview</span>
+        <span data-de="Übersicht" data-en="Overview">Overview</span>
       </a>
       <a href="./impressum.html">
-        <span class="lang-de">Impressum</span>
-        <span class="lang-en">Legal Notice</span>
+        <span data-de="Impressum" data-en="Legal Notice">Legal Notice</span>
       </a>
     </nav>
   </div>
